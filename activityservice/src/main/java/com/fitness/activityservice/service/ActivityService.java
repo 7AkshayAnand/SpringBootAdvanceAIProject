@@ -7,7 +7,7 @@ import com.fitness.activityservice.model.Activity;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import lombok.RequiredArgsConstructor;
-import org.jspecify.annotations.Nullable;
+//import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
 
 public class ActivityService {
     private final ActivityRepository activityRepository;
-    public @Nullable ActivityResponse trackActivity(ActivityRequest activityRequest) {
+    public  ActivityResponse trackActivity(ActivityRequest activityRequest) {
 
         Activity activity=Activity.builder().userId(activityRequest.getUserId()).
                 type(activityRequest.getType()).
@@ -28,7 +28,7 @@ public class ActivityService {
         return mapToResponse(savedActivity);
     }
 
-    private @Nullable ActivityResponse mapToResponse(Activity savedActivity) {
+    private  ActivityResponse mapToResponse(Activity savedActivity) {
 
         ActivityResponse response=new ActivityResponse();
 
