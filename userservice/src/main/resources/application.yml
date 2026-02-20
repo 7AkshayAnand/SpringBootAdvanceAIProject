@@ -3,8 +3,8 @@ spring:
     name: userservice
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/fitness-micro-user
-    username: postgres
+    url: jdbc:mysql://localhost:3306/fitness_micro_user
+    username: root
     password: akshay
 
   jpa:
@@ -12,7 +12,7 @@ spring:
       ddl-auto: update
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.PostgreSQLDialect
+        dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
     show-sql: true
 
