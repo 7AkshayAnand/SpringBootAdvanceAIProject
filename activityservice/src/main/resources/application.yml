@@ -3,10 +3,8 @@ spring:
     name: activityservice
 
   data:
-    mongodb:
-      uri: mongodb://username:password@localhost:27017/activitydb?authSource=admin
-      database: aiactivityfitness
-
+      mongodb:
+        uri: mongodb://username:password@localhost:27017/aiactivityfitness?authSource=admin
 server:
   port: 8082
 
@@ -14,3 +12,7 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
