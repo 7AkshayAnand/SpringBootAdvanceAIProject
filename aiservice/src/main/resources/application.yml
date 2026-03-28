@@ -8,7 +8,7 @@ spring:
       database: airecommendationfitness
 server:
   port: 8083
-
+#below is for eureka
 eureka:
   client:
     service-url:
